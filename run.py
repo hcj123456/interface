@@ -9,7 +9,7 @@ import unittest
 #import HTMLTestRunner
 from HTMLTestRunner import HTMLTestRunner
 
-from test_case.data import TestHttpRequest
+# from test_case.data import TestHttpRequest
 
 suite=unittest.TestSuite()
 loader=unittest.TestLoader()
