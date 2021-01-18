@@ -20,7 +20,7 @@ class MyConfig(ConfigParser):
         c = ConfigParser()
         c.read(os.path.join(CONF_DIR, 'env.ini'), encoding='utf8')
         env = c.getint('env', 'switch')
-        # 根据开关的值，分别取读取不同环境的配置文件
+        # 根据开关的值，分别读取不同环境的配置文件
         if env == 1:
             self.read(os.path.join(CONF_DIR, 'conf.ini'), encoding='utf8')
         elif env == 2:
@@ -30,6 +30,7 @@ class MyConfig(ConfigParser):
 
 
 myconf = MyConfig()
+
 
 
 

@@ -1,0 +1,15 @@
+Search_data1:
+  title: 提取接口返回数据
+  interface: 获取token
+  method: post
+  url: https://open.ybj.fujian.gov.cn/api/gafe/rest
+  json: {"funid": "N03.00.05.11", "data": {"app_type": "0", "appid": "82e82b4703aaafff"}, "appid": "82e82b4703aaafff", "sign_type": "MD5", "encrypt_type": "PKCS7"}
+  excepted: 1
+  tel: 1588312
+Search_data2:
+  title: 个人信息
+  interface: 加密接口
+  method: post
+  url: https://open.ybj.fujian.gov.cn/api/gafe/rest?zyregion=350600
+  json: {"funid": "N07.08.03.03","data": {"ybid": "3"},"appid": "82e82b4703aaafff","access_token": "#access_token#","sign_type": "MD5","encrypt_type": "PKCS7"}
+  excepted: 1

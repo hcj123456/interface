@@ -7,7 +7,12 @@ time:2019/8/21
 E-mail:liudl7@lenovo.com
 =============================
 """
+import os
+
+import ddt
 import openpyxl
+
+from common.constant import DATA_DIR
 
 
 class CaseData(object):
@@ -94,6 +99,7 @@ class ReadExcel(object):
         # 将包含所有用例的列表cases进从返回
         return cases
 
+
     # def read_data_dict2(self):
     #     self.open()
     #     cases = []
@@ -119,7 +125,6 @@ class ReadExcel(object):
         self.sheet.cell(row=row, column=column, value=value)
         # 保存
         self.workbook.save(self.file_name)
-
 
 # if __name__ == '__main__':
 #     do_excel = ReadExcel('cases.xlsx', 'Sheet1')

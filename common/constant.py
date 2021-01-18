@@ -43,3 +43,6 @@ CONF_DIR = os.path.join(BASE_DIR, 'conf')
 
 # 用例数据所在的目录路径
 DATA_DIR = os.path.join(BASE_DIR, 'test_data')
+
+#读取yaml中的数据
+# YAML_DIR= os.path.join(BASE_DIR, 'test_data')
