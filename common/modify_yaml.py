@@ -22,7 +22,7 @@ def changeYamlConfig(path, key, value):
         for line in lines:
             if key in line and '#' not in line:
                 leftstr=line.split(":")[0]
-                newline = "{0}: {1}".format(leftstr, str(value).replace('\'','\"'))
+                newline = "{0}: {1}".format(leftstr,str(value).replace('\'','\"'))
                 line = newline
                 f.write('%s\n' % line)
                 flag = 1
@@ -31,5 +31,5 @@ def changeYamlConfig(path, key, value):
         f.close()
         return flag
 file_path = os.path.dirname(os.path.dirname(__file__)) + os.sep + 'test_data' + os.sep + 'data.yml'
-rr=changeYamlConfig(file_path,"tel",1580000+random.randint(0000,9999))
+rr=changeYamlConfig(file_path,"tel","1582346%s"%(random.randint(1000,9999)))
 print(rr)
