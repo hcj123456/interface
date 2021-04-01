@@ -13,6 +13,7 @@ class Read_Yaml_Data(object):
         file_path = os.path.dirname(os.path.dirname(__file__)) + os.sep + 'test_data' + os.sep + file_name + '.yml'
         f = open(file_path, 'r', encoding='utf-8')
         data = yaml.load(f, Loader=yaml.FullLoader).get(name)
+        print(data)
         titles = []
         for i in data.keys():
             titles.append(i)
@@ -23,5 +24,5 @@ class Read_Yaml_Data(object):
         # print(list(zip_data))
         case_data = list(zip_data)
         return case_data
-# tt = Read_Yaml_Data().ret_yaml_data('data','Search_data1')
-# print(tt)
+tt = Read_Yaml_Data().ret_yaml_data('data','Search_data1')
+print(tt)

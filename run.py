@@ -10,10 +10,11 @@ import unittest
 from HTMLTestRunner import HTMLTestRunner
 
 # from test_case.data import TestHttpRequest
+from common.constant import CASES_DIR
 
 suite=unittest.TestSuite()
 loader=unittest.TestLoader()
-suite.addTest(loader.loadTestsFromTestCase(TestHttpRequest))
+suite.addTest(loader.loadTestsFromTestCase(CASES_DIR))
 filetime = time.strftime("%Y-%m-%d %H_%M_%S", time.localtime())
 filename = '{}report.html'.format(filetime)
 # 项目目录路径
